@@ -203,6 +203,9 @@ void ConfigParser::addOptionsModel(cli::CLIWrapper& cli) {
   cli.add<int>("--dim-emb",
       "Size of embedding vector",
       512);
+  cli.add<bool>("--buggy-prenorm",
+      "Use old buggy pre-norm implementation, for compatibility with some models",
+      false);
   cli.add<int>("--factors-dim-emb",
       "Embedding dimension of the factors. Only used if concat is selected as factors combining form");
   cli.add<std::string>("--factors-combine",
